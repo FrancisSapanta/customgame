@@ -1,6 +1,4 @@
-let players = [
-    ["Francis", "Ascendent 1"] , ["Leslie", "Gold 3"]
-];
+let players = [[]];
 
 let maps = [];
 
@@ -27,6 +25,7 @@ function addPlayer() {
     }
 }
 
+//function that adds user inputted map to the map array
 function addMap() {
     let mapList = document.getElementById("allMapsList");
     mapList.innerHTML='';
@@ -37,6 +36,7 @@ function addMap() {
     }
 }
 
+//shuffles all the current players
 function shufflePlayers(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -87,6 +87,7 @@ btnAdd.addEventListener('click', () =>{
     console.log(players);
 });
 
+//add map to map list
 btnAddMap.addEventListener('click', () =>{
     if (mapName.value.trim().length == 0)
     {
@@ -99,12 +100,13 @@ btnAddMap.addEventListener('click', () =>{
     addMap();
 
 });
-
+//randomizes map off map pool
 btnRandomizeMap.addEventListener('click', () =>{
     pickMap();
 
 });
 
+//splits current players into two teams on button click
 btnRandomize.addEventListener('click', () =>{
     shufflePlayers(players);
     teamOneList.innerHTML = '';
