@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Custom Game Randomizer</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Compiled and minified CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    </head>
+
+<body>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Custom Game Randomizer</h1>
+
+            <div class = "row">
+                <div class="col-6">
+                    <input id = "addPlayerName" type="text" class="form-control" placeholder="Username" aria-label="Username">
+                  </div>
+                  <div class="col-4">
+                    <input id = "addPlayerRank" type="text" class="form-control" placeholder="Rank" aria-label="Rank">
+                  </div>
+                  <div class="col-2">
+                    <button id = "addPlayerBtn" type="button" class="btn btn-secondary">Add</button>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <input id = "addMapName" type="text" class="form-control" placeholder="Map" aria-label="Map">
+                  </div>
+                  <div class="col-2">
+                    <button id = "addMapBtn" type="button" class="btn btn-secondary">Add</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>Current Players</h4>
+                <table class="responsive-table" id="allPlayersList"></table>
+                <button id = "randomizeTeamsBtn" type="button" class="btn btn-secondary">Randomize Teams</button>
+            </div>
+
+            <div class="col-6">
+                <h4>Map Pool</h4>
+                <table class="responsive-table" id="allMapsList"></table>  
+                <button id = "randomizeMapBtn" type="button" class="btn btn-secondary">Randomize Map</button>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div class="container">
+       
+        
+
+        <div class ="row">
+
+        </div>
+
+        <div class="row">
+            <h2 id ="mapName">Current Map: </h2>
+        </div>
+
+
+
+        
+
+        <div class = "row">
+            <div class="col-6">
+                <h2 id = "team1">Team One</h2>
+                <table class="responsive-table" id="teamOneList">
+                </table>
+              </div>
+              <div class="col-6">
+                <h2 id = "team2">Team Two</h2>
+                <table class="responsive-table" id="teamTwoList">
+                </table>
+              </div>
+        </div>
+
+        <div class= "row">
+
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</html>
